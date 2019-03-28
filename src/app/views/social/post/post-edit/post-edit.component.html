@@ -1,0 +1,52 @@
+<div class="col-md-5" style="margin:auto; background-color:#e9ebee;">
+  <!-- <div class="breadcrumb">
+    <h1>Post Detail Information</h1>
+  </div>
+  <div class="separator-breadcrumb border-top"></div> -->
+  <div class="separator-breadcrumb border-top" style="visibility: hidden"></div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2> {{postTitle}} </h2>
+    </div>
+  </div>
+  <div class="separator-breadcrumb border-top" style="visibility: hidden"></div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <img class="same_size" src="{{postPicture}}" alt="">
+    </div>
+  </div>
+  <div class="separator-breadcrumb border-top" style="visibility: hidden"></div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4> {{description}} </h4>
+        <a class='text-primary' style="float:right; cursor: pointer; margin-right: 40px;" (click)='readMore(true)' [hidden]='!showMore'>{{'Read more'}}</a>
+        <a class='text-primary' style="float:right; cursor: pointer; margin-right: 40px;" (click)='readMore(false)' [hidden]='!showLess'>{{'Show Less'}}</a>
+    </div>
+  </div>
+  <div class="separator-breadcrumb border-top"></div>
+  <div class="row">
+    <div class="col-md-12 text-center" style="cursor: pointer; text-align: center;">
+      <a class="m-5" (click)="sendRecommend()"> <i class="text-20 i-Like"></i> Send Recommendation </a>
+      <a class="m-5" (click)="addMyfavorite()"> <i class="text-20 i-Mail-Favorite"></i> Add to My Favorite </a>
+      <a class="m-5" (click)="showSearch()"> <i class="text-20 i-Yes"></i> Add a Comment </a>
+    </div>
+  </div>
+  <div class="separator-breadcrumb border-top"></div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{postPicture}}" alt="" class="businessAvatar">
+        </div>
+        <div class="col-md-10">
+          <input type="text" class="form-control form-control-rounded margin" id="Comment" placeholder="Write a comment" #search style="float:left;">
+        </div>      
+      </div>
+    </div>    
+  </div>
+  <div class="row col-md-6 form-group mb-3">
+    <div class="col-md-12 text-center">
+      <button class="btn btn-outline-secondary m-2 button_size" (click)="returnPost()" hidden>Return( Test )</button>
+    </div>
+  </div>
+</div>

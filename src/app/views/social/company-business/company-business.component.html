@@ -1,0 +1,158 @@
+<h1> Company-Business Name! </h1>
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">About the company</div>
+        <img src="./assets/images/photo-wide-1.jpg" alt="this is a company picture">
+        <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Company employees</div>
+        <ngx-datatable #table class='material' [columns]="columns_employees" [columnMode]="'force'" [headerHeight]="50"
+          [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='company_employees '>
+        </ngx-datatable>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title"> Market deal that the business offers </div>
+        <ngx-datatable #table class='material' [columns]="columns_offers" [columnMode]="'force'" [headerHeight]="50"
+          [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='business_offers'>
+        </ngx-datatable>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title"> In the middle of events </div>
+        <ngx-datatable #table class='material' [columns]="columns_events" [columnMode]="'force'" [headerHeight]="50"
+          [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='business_events'>
+        </ngx-datatable>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">    
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title"> Company information </div>
+        <table class="table table-bordered table-hover table_shadow">
+          <tbody>
+            <tr>
+              <th scope="row">Numbers</th>
+              <td>38</td>
+            </tr>
+            <tr>
+              <th scope="row">Tel</th>
+              <td>0032 5443 7860</td>
+            </tr>
+            <tr>
+              <th scope="row">Adress</th>
+              <td>Business Center, 2nd Syromyatnicheskiy Pereulok 1, Delta Plaza, Pereulok Stoleshnikov, 1, Moscow, 125009
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Country</th>
+              <td>Russian Federation</td>
+            </tr>
+            <tr>
+              <th scope="row">City</th>
+              <td>Moscow</td>
+            </tr>
+            <tr>
+              <th scope="row">Web site</th>
+              <td>www.example.com</td>
+            </tr>
+            <tr>
+              <th scope="row">Email</th>
+              <td>info@keb.at</td>
+            </tr>
+            <tr>
+              <th scope="row">Category</th>
+              <td>Hi-Tech</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <ngx-datatable #table class='material' [columns]="columns_employees" [columnMode]="'force'" [headerHeight]="50"
+          [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='company_information'>
+          </ngx-datatable> -->
+      </div>
+    </div>    
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="text-center"> Company's products </h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-6 o-hidden card-body table_shadow">
+          <img alt="dsada" class="card-img-top" src="./assets/images/products/headphone-1.jpg">
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-6 o-hidden card-body table_shadow">
+          <img alt="dsada" class="card-img-top" src="./assets/images/products/headphone-2.jpg">
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-6 o-hidden card-body table_shadow">
+          <img alt="dsada" class="card-img-top" src="./assets/images/products/speaker-2.jpg">
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-6 o-hidden card-body table_shadow">
+          <img _ngcontent-c18="" alt="dsada" class="card-img-top" src="./assets/images/products/headphone-4.jpg">
+          <div _ngcontent-c18="" class="card-body">
+            <p _ngcontent-c18="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-6 o-hidden card-body table_shadow">
+          <img _ngcontent-c18="" alt="dsada" class="card-img-top" src="./assets/images/products/iphone-1.jpg">
+          <div _ngcontent-c18="" class="card-body">
+            <p _ngcontent-c18="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-6 o-hidden card-body table_shadow">
+          <img _ngcontent-c18="" alt="dsada" class="card-img-top" src="./assets/images/products/watch-2.jpg">
+          <div _ngcontent-c18="" class="card-body">
+            <p _ngcontent-c18="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,268 @@
+<h1> Private-Business Page! </h1>
+<div class="separator-breadcrumb border-top"></div>
+<div class="row">
+  <div class="col-md-12">
+    <label>You can upload/change the company image in here:</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+      </div>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="photo" accept="image/*" aria-describedby="photo"
+          (change)="onFileSelected($event)">
+        <label class="custom-file-label"
+          for="photo"></label>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <label>You can introduce the company carreer in here:</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Company information</span>
+      </div>
+      <textarea class="form-control"></textarea>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Market deal <i class="i-Add" (click)="openModal(modalMarket)" title="Add"> </i></div>
+        <ngx-datatable #table class='material' [columns]="columns_deals" [columnMode]="'force'" [headerHeight]="50"
+          [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='market_deals' [selectionType]="'row'"
+          (select)="slideClick($event)">
+        </ngx-datatable>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title"> Events <i class="i-Add" (click)="openModal(modalEvents)" title="Add"> </i></div>
+        <ngx-datatable #table class='material' [columns]="columns_deals" [columnMode]="'force'" [headerHeight]="50"
+          [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='market_deals' [selectionType]="'row'"
+          (select)="slideClick($event)">
+        </ngx-datatable>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title"> Employees lists <i class="i-Add" (click)="openModal(modalLists)" title="Add"> </i> </div>
+        <ngx-datatable #table class='material' [columns]="columns_lists" [columnMode]="'force'" [headerHeight]="50"
+          [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='company_employee_lists' [selectionType]="'row'"
+          (select)="NameClick($event)">
+        </ngx-datatable>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="card-title"> Company's products 
+    <i class="i-Add" (click)="openModal(modalProductAdd)" title="Add"> </i>
+  </div>
+  <h2 class="text-center">  </h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"> Laptop 
+            <i class="i-Data-Save" alt="save" (click)="openModal(modalSmall)" title="Save"> </i> 
+            <i class="i-Delete-File" alt="save" (click)="openModal(modalSmall)" title="Delete"> </i> 
+          </div>
+          <img alt="dsada" class="card-img-top" src="./assets/images/photo-wide-1.jpg">
+          <div class="card-body">
+            <textarea class="form-control">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"> TV 
+            <i class="i-Data-Save" (click)="openModal(modalSmall)" title="Save"> </i> 
+            <i class="i-Delete-File" (click)="openModal(modalSmall)" title="Delete"> </i> 
+          </div>
+          <img alt="dsada" class="card-img-top" src="./assets/images/photo-wide-1.jpg">
+          <div class="card-body">
+            <textarea
+              class="form-control">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"> Phone 
+            <i class="i-Data-Save" alt="save" (click)="openModal(modalSmall)" title="Save"> </i> 
+            <i class="i-Delete-File" alt="save" (click)="openModal(modalSmall)" title="Delete"> </i>
+          </div>
+          <img alt="dsada" class="card-img-top" src="./assets/images/photo-wide-3.jpg">
+          <div class="card-body">
+            <textarea class="form-control">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"> Laptop
+            <i class="i-Data-Save" alt="save" (click)="openModal(modalSmall)" title="Save"> </i>
+            <i class="i-Delete-File" alt="save" (click)="openModal(modalSmall)" title="Delete"> </i>
+          </div>
+          <img alt="dsada" class="card-img-top" src="./assets/images/photo-wide-1.jpg">
+          <div class="card-body">
+            <textarea
+              class="form-control">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"> TV
+            <i class="i-Data-Save" alt="save" (click)="openModal(modalSmall)" title="Save"> </i>
+            <i class="i-Delete-File" alt="save" (click)="openModal(modalSmall)" title="Delete"> </i>
+          </div>
+          <img alt="dsada" class="card-img-top" src="./assets/images/photo-wide-1.jpg">
+          <div class="card-body">
+            <textarea
+              class="form-control">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"> Phone
+            <i class="i-Data-Save" alt="save" (click)="openModal(modalSmall)" title="Save"> </i>
+            <i class="i-Delete-File" alt="save" (click)="openModal(modalSmall)" title="Delete"> </i>
+          </div>
+          <img alt="dsada" class="card-img-top" src="./assets/images/photo-wide-3.jpg">
+          <div class="card-body">
+            <textarea
+              class="form-control">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, cumque!</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #modalMarket let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form novalidate="" class="ng-untouched ng-pristine ng-valid">
+      <div class="form-group">
+        <label for="picker1">Name: </label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="picker1">Number: </label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="picker1">Link: </label>
+        <input type="text" class="form-control">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark btn-rounded" (click)="modal.close('ok')">Ok</button>
+  </div>
+</ng-template>
+<ng-template #modalEvents let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form novalidate="" class="ng-untouched ng-pristine ng-valid">
+      <div class="form-group">
+        <label for="picker1">Name: </label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="picker1">Link: </label>
+        <input type="text" class="form-control">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark btn-rounded" (click)="modal.close('ok')">Ok</button>
+  </div>
+</ng-template>
+<ng-template #modalLists let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form novalidate="" class="ng-untouched ng-pristine ng-valid">
+      <div class="form-group">
+        <label for="picker1">Name: </label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="picker1">Role: </label>
+        <input type="text" class="form-control">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark btn-rounded" (click)="modal.close('ok')">Ok</button>
+  </div>
+</ng-template>
+<ng-template #modalProductAdd let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form novalidate="" class="ng-untouched ng-pristine ng-valid">
+      <label for="image">Image</label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" accept="image/*" id="photo" aria-describedby="photo"
+            (change)="onFileSelected($event)">
+          <label class="custom-file-label" for="photo">{{chooseFileName}}</label>
+        </div>
+      </div>
+      <label class="feedback-error" *ngIf="fileType">You must choose image files</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Comments</span>
+        </div>
+        <textarea class="form-control" aria-label="Comments"></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark btn-rounded" (click)="modal.close('ok')">Ok</button>
+  </div>
+</ng-template>
